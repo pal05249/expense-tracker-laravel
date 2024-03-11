@@ -1,0 +1,21 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import "vue-select/dist/vue-select.css";
+@import url('https://unpkg.com/@vuepic/vue-datepicker@latest/dist/main.css');
+body{
+    margin:0;
+    padding:0;
+}
+dataTables_length label,
+.dataTables_filter label,
+.dataTables_info {
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #98a6ad;
+}
