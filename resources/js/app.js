@@ -22,21 +22,25 @@ import axios from 'axios';
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import { createApp } from 'vue'
 import Index from './Index.vue'
 import router from './routes'
+import  VueSelect  from "vue-select";
+import helpers from './helpers';
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.use(VueRouter);
 
+const app = createApp(Index);
 
-const app = new Vue({
-    el: '#root',
-    router,
-    components:{Index},
-});
+// app.component('VueDatePicker', VueDatePicker);
+
+app.component('v-select', VueSelect)
+
+app.use(router)
+app.use(helpers)
+app.mount("#root");
+

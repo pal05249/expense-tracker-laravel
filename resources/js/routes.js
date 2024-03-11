@@ -1,18 +1,24 @@
-import VueRouter from 'vue-router';
-import Index from './Index'
-import charts from './pages/charts.vue';
-import dashboard from './pages/ExampleComponent'
 
-const routes=[
- 
-    { path:"/dashboard",component: dashboard,name:"dashboard"},
-    {path:"/transactions",component:charts,name:"charts"}
-       
+import { createWebHistory, createRouter } from "vue-router";
+import Transactions from './pages/Transactions.vue';
+import Dashboard from './pages/Dashboard.vue'
+import UserProfile from './pages/UserProfile.vue'
+const routes = [
+
+    { path: "/dashboard", component: Dashboard, name: "Dashboard" },
+    { path: "/transactions", component: Transactions, name: "Transactions" },
+    { path: "/profile", component: UserProfile, name: "UserProfile", props: true }
+
 ]
 
-const router = new VueRouter({
+// const router = new VueRouter({
+//     routes,
+//     mode:"history",
+// });
+const router = createRouter({
+    history: createWebHistory(),
     routes,
-    mode:"history",
 });
+
 
 export default router;
