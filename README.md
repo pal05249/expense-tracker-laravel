@@ -64,11 +64,15 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Steps to install
 
-# Clone the project
-# Use composer update and npm install to install packages
-# Copy .env.example to .env(create new file) 
-# Create a mysql db and connect to app through env
-# Run migrations ( php artisan migrate) 
-# To use the app , Run the commands 'php artisan serve' and 'npm run watch' in two different terminals 
+- Clone the project
+- Use composer update and npm install to install packages
+- Copy .env.example to .env(create new file) 
+- Create a mysql db and connect to app through env
+- Run migrations ( php artisan migrate) 
+- To use the app , Run the commands 'php artisan serve' and 'npm run watch' in two different terminals 
+
+## PHP and NODE VERSION
+- PHP VERSION 7.4.3
+- NODE JS VERSION 20.11
 
 
